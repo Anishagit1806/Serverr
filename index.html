@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rasik's Server</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 RASIK'S SERVER 🔥</h1>
+    <p>Welcome back, BROOO 🎉🥳</p>
+
+    <div class="links">
+      <button onclick="downloadWithPassword('project1.pptx')">📄 TEAM (Download PPT)</button>
+      <button onclick="openProject('https://example.com/project2')">🔐 SECRET FOLDER</button>
+      <button onclick="openProject('https://example.com/docs')">📝 DOCUMENTATION</button>
+      <button onclick="window.location.href='college.html'">🎓 COLLEGE MATERIAL</button>
+    </div>
+  </div>
+
+  <script>
+    function downloadWithPassword(file) {
+      const correctPassword = "Rasik2504";
+      const userInput = prompt("Enter password to download this PPT:");
+      if (userInput === correctPassword) {
+        const link = document.createElement("a");
+        link.href = file;
+        link.download = file;
+        link.click();
+      } else {
+        alert("Incorrect password. Download denied.");
+      }
+    }
+
+    function openProject(url) {
+      const correctPassword = "Rasik2524";
+      const userInput = prompt("Enter password to access this project:");
+      if (userInput === correctPassword) {
+        window.open(url, "_blank");
+      } else {
+        alert("Incorrect password. Access denied.");
+      }
+    }
+  </script>
+</body>
+</html>
